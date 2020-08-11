@@ -1,0 +1,1 @@
+### The `/widget` folder contains custom made widgets to use around the app
