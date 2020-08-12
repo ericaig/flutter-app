@@ -6,19 +6,13 @@ class User {
   final String nick;
   final String idioma;
 
-  /**
-   * @property {string} fullName This property is created when userDb.read() is called
-   */
+  /// @property {string} fullName This property is created when userDb.read() is called
   final String fullName;
 
-  /**
-   * @property {boolean} checked This property helps to identify a checked member
-   */
+  /// @property {boolean} checked This property helps to identify a checked member
   final bool checked;
 
-  /**
-   * @property {boolean} disabled This property helps to identify a disabled (not checkable) member
-   */
+  /// @property {boolean} disabled This property helps to identify a disabled (not checkable) member
   final bool disabled;
 
   User(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/services/api/handlers/login.dart';
 
 class LoginPageForm extends StatefulWidget {
   @override
@@ -21,16 +22,16 @@ class _LoginPageFormState extends State<LoginPageForm> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                TextFormField(
+                TextField(
                   decoration: InputDecoration(
                     hintText: 'Nombre de usuario',
-                    prefixIcon: Icon(Icons.person),
+                    prefixIcon: const Icon(Icons.person),
                   ),
                 ),
-                TextFormField(
+                TextField(
                   decoration: InputDecoration(
-                    hintText: 'Contraseña',
-                    prefixIcon: Icon(Icons.lock),
+                    hintText: 'Contraseña...',
+                    prefixIcon: const Icon(Icons.lock),
                   ),
                 ),
               ],
@@ -41,6 +42,8 @@ class _LoginPageFormState extends State<LoginPageForm> {
             color: Colors.red,
             padding: EdgeInsets.only(top: 15, bottom: 15),
             onPressed: () {
+              _doLogin();
+              // SystemChannels.textInput.invokeMethod('TextInput.hide');
               // Validate will return true if the form is valid, or false if
               // the form is invalid.
               // if (_formKey.currentState.validate()) {
@@ -64,4 +67,10 @@ class _LoginPageFormState extends State<LoginPageForm> {
       ),
     );
   }
+}
+
+void _doLogin() {
+  final api = LoginApiService();
+
+  api.login(username: 'erickmp', password: '1234');
 }
