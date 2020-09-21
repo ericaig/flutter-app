@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/pages/login/index.dart';
+import 'package:flutter_app/pages/message_list/message_list_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,7 +9,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: LoginPage(),
+      title: 'Flutter App',
+      theme: ThemeData(primarySwatch: Colors.cyan, accentColor: Colors.red),
+      home: MessageListPage(
+        title: "Message List",
+      ),
     );
   }
 }

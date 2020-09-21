@@ -41,6 +41,3 @@ app.*.map.json
 
 # Exceptions to above rules.
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
-
-# I don't want to expose the URLs used for API calls, as I consider them private
-# lib/services/api/routes.dart

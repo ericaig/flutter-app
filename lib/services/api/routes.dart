@@ -1,5 +1,5 @@
 abstract class ApiRoutes {
-  static const String domain = 'https://example.com';
-  static const String login = '/login';
-  static const String retrieveUser = '/retrieve-user';
+  static const String domain = '';
+  static const String login = '';
+  static const String retrieveUser = '';
 }
